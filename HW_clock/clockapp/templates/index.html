@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    {% load staticfiles %}
+    <head>
+        <title>잔나비 됴아</title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    </head>
+
+    <body>
+        <div id="frame" style="border-style: solid">
+            <h2>현재 시각은</h2>
+            <p id="date">
+                <span id="day">{{ a.month }}</span
+                >월 <span id="day">{{ a.day }}</span
+                >일 <span id="day">{{ weekday }}</span
+                >요일
+            </p>
+            <p id="time">
+                {{ AM }} <span id="day">{{ hour }}</span
+                >시 <span id="day">{{ a.minute }}</span
+                >분 <span id="day">{{ a.second }}</span
+                >초 입니다.
+            </p>
+        </div>
+    </body>
+</html>
