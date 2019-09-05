@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-    function eval(){
+    <head>
+        <script>
+            function add(num) {
+                document.form.display.value = document.form.display.value + num
+            }
 
-    }
-</script>
-</head>
-<body>
-    <form>
-        display<input id = "dispaly" value = "0" size = "30"/><br>
-        <input type = "button" value = "   7   " onclick="add('7')">
-        <input type = "button" value = "   8   " onclick="add('8')">
-        <input type = "button" value = "   9   " onclick="add('9')">
-        <input type = "button" value = "   /   " onclick="add('/')"><br>
-        <input type = "button" value = "   4   " onclick="add('4')">
-        <input type = "button" value = "   5   " onclick="add('5')">
-        <input type = "button" value = "   6   " onclick="add('6')">
-        <input type = "button" value = "   *   " onclick="add('*')"><br>
-        <input type = "button" value = "   1   " onclick="add('1')">
-        <input type = "button" value = "   2   " onclick="add('2')">
-        <input type = "button" value = "   3   " onclick="add('3')">
-        <input type = "button" value = "   -   " onclick="add('-')"><br>
-        <input type = "button" value = "   0   " onclick="add('0')">
-        <input type = "button" value = "   +   " onclick="add('+')"><br>
-        <input type = "button" value = "   Clear   " onclick=clearDisplay()>
-        <input type = "button" value = "   Enter   " name = 'enter' onclick=compute()>
-    </form>
-</body>
+            function compute() {
+                document.form.display.value = eval(document.form.display.value)
+            }
+
+            function clearDisplay() {
+                document.form.display.value = ""
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form">
+            display<input id="dispaly" name="display" size="30" /><br />
+            <input type="button" value="   7   " onclick="add('7')" />
+            <input type="button" value="   8   " onclick="add('8')" />
+            <input type="button" value="   9   " onclick="add('9')" />
+            <input type="button" value="   /   " onclick="add('/')" /><br />
+            <input type="button" value="   4   " onclick="add('4')" />
+            <input type="button" value="   5   " onclick="add('5')" />
+            <input type="button" value="   6   " onclick="add('6')" />
+            <input type="button" value="   *   " onclick="add('*')" /><br />
+            <input type="button" value="   1   " onclick="add('1')" />
+            <input type="button" value="   2   " onclick="add('2')" />
+            <input type="button" value="   3   " onclick="add('3')" />
+            <input type="button" value="   -   " onclick="add('-')" /><br />
+            <input type="button" value="   0   " onclick="add('0')" />
+            <input type="button" value="   +   " onclick="add('+')" /><br />
+            <input type="button" value="   Clear   " onclick="clearDisplay()" />
+            <input type="button" value="   Enter   " name="enter" onclick="compute()" />
+        </form>
+    </body>
+</html>
