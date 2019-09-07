@@ -1,0 +1,14 @@
+<!--저장된 학생 리스트 보여주는 페이지-->
+
+<a href="{% url 'create_page' %}"><button>새로운 학생 데이터</button></a>
+
+{% for student in students %}
+{{ student.name }}
+{{ student.department }}
+{{ student.admission_year }}
+{{ student.student_number }}
+{{ student.level }}
+{{ student.grade_avg }}
+{% endfor %}
+
+<a href="{% url 'read' student.id %}">자세히</a>

@@ -1,0 +1,19 @@
+<!--저장된 데이터를 자세히 보여줌-->
+
+<h1>{% for student in students %}</h1>
+
+<p>{{ student.name }}</p>
+<p>{{ student.department }}</p>
+<p>{{ student.admission_year }}</p>
+<p>{{ student.student_number }}</p>
+<p>{{ student.level }}</p>
+<p>{{ student.grade_avg }}</p>
+{% endfor %}
+
+<form action="{% url 'update' %}">
+    <input type="submit" , value="수정" />
+</form>
+
+<form action="{% url 'delete' %}">
+    <input type="submit" , value="삭제" />
+</form>
