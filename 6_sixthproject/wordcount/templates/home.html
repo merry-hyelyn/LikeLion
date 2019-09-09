@@ -1,0 +1,28 @@
+<html>
+    {% load staticfiles %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="blue">Wo</div>
+            <div id="green">rd</div>
+            <div id="yellow">Co</div>
+            <div id="red">unt</div>
+
+            <h5>안녕하세요 여기서 글자를 세세요</h5>
+
+            <form action="{% url 'result' %}">
+                <div id="textarea">
+                    <textarea cols="80" rows="3" name="fulltext"></textarea>
+                    <br />
+                </div>
+                <div id="count"><input type="submit" value="Count" /></div>
+                <br />
+                <div id="about">
+                    <a href="{% url 'about' %}">ABOUT</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
